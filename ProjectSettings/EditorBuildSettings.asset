@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scenes/cinematic-1.unity
+    guid: 25da6d04bd639d0af922196a157ac6e1
+  - enabled: 1
+    path: Assets/scenes/world.unity
+    guid: 158761d6a3a797ec590a35a10a3c1e48
+  - enabled: 1
+    path: Assets/scenes/cinematic-2.unity
+    guid: 1141e2538c8b77aeabb514bd05b52e14
+  - enabled: 1
+    path: Assets/scenes/cinematic-3.unity
+    guid: b36b69e75fe7acf8191f5482164a47a3
   m_configObjects: {}

@@ -2,43 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackBehaviour : StateMachineBehaviour
-{    
-    private PlayerBehaviour playerBehaviour;
-    bool started, stopped;
-
+public class FatherDeathBehaviour : StateMachineBehaviour
+{
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-       playerBehaviour = animator.GetComponentInParent<PlayerBehaviour>();
-       started = stopped = false;       
-    }
+    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if(playerBehaviour != null)
-        {
-            if(!started && stateInfo.normalizedTime >= 0.25f)
-            {
-                playerBehaviour.SetEnabledSwordCollider(true);
-
-                started = true;
-            }
-
-            if(!stopped && stateInfo.normalizedTime >= 0.37f)
-            {
-                playerBehaviour.SetEnabledSwordCollider(false);
-
-                stopped = true;
-            }
-        }
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       
+       UnityEngine.SceneManagement.SceneManager.LoadScene("cinematic-3");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
